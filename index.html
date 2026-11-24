@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Indu Sri Function Hall – Weddings, Receptions and Celebrations</title>
+<meta name="description" content="Indu Sri Function Hall: a traditional venue for weddings, engagements, receptions, housewarmings and family celebrations. Book online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yatra+One&family=Hind:wght@400;600&family=Tiro+Devanagari+Hindi&family=Tiro+Telugu&display=swap" rel="stylesheet">
+<style>
+:root{
+  --indigo:#1c2a5e; --indigo-d:#121c42; --kumkum:#b3202a; --turmeric:#f2b62c;
+  --cream:#fbf3e0; --blush:#f6dcd0; --leaf:#3b7a57; --ink:#25203a;
+  --display:'Yatra One',Georgia,serif;
+  --body:'Hind',system-ui,sans-serif;
+  /* bandhani dot pattern */
+  --dots:radial-gradient(circle,rgba(242,182,44,.28) 1.6px,transparent 2px) 0 0/22px 22px;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:var(--body);background:var(--cream);color:var(--ink);line-height:1.7;font-size:18px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--kumkum);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+section{padding:80px 0}
+h2{font-family:var(--display);font-weight:400;font-size:clamp(1.9rem,5vw,2.7rem);color:var(--indigo);margin-bottom:10px;line-height:1.2}
+.center{text-align:center}
+.lead{max-width:58ch}
+.center .lead,.lead.center{margin-left:auto;margin-right:auto}
+.sec-head{margin-bottom:38px}
+
+/* border strip (block-print diamonds) */
+.strip{height:22px;background:
+  linear-gradient(135deg,var(--kumkum) 25%,transparent 25%) -11px 0/22px 22px,
+  linear-gradient(225deg,var(--kumkum) 25%,transparent 25%) -11px 0/22px 22px,
+  linear-gradient(315deg,var(--kumkum) 25%,transparent 25%) 0 0/22px 22px,
+  linear-gradient(45deg,var(--kumkum) 25%,transparent 25%) 0 0/22px 22px,var(--turmeric)}
+
+/* buttons */
+.btn{display:inline-block;padding:13px 30px;border-radius:6px;background:var(--kumkum);color:#fff;font:inherit;font-weight:600;text-decoration:none;border:2px solid var(--kumkum);cursor:pointer;transition:background .2s,color .2s}
+.btn:hover{background:transparent;color:var(--kumkum)}
+.btn.gold{background:var(--turmeric);border-color:var(--turmeric);color:var(--indigo-d)}
+.btn.gold:hover{background:transparent;color:var(--turmeric)}
+.btn.ghost{background:transparent;border-color:#fff;color:#fff}
+.btn.ghost:hover{background:#fff;color:var(--indigo)}
+.btns{display:flex;gap:14px;flex-wrap:wrap}
+
+/* nav */
+nav{position:sticky;top:0;z-index:20;background:var(--indigo-d);color:var(--cream);display:flex;justify-content:space-between;align-items:center;padding:10px 24px;gap:16px}
+nav .brand{font-family:var(--display);color:var(--turmeric);font-size:1.2rem;text-decoration:none}
+nav ul{display:flex;gap:24px;list-style:none;padding:0;font-size:.98rem;margin-left:auto}
+nav ul a{text-decoration:none}
+nav ul a:hover{color:var(--turmeric)}
+nav .btn{padding:7px 20px}
+@media (max-width:780px){nav ul{display:none}nav .btn{margin-left:auto}}
+
+/* hero */
+.hero{background:var(--dots),var(--indigo);color:var(--cream);padding:64px 0 72px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+.hero small{display:block;font-size:1.1rem;color:var(--turmeric);margin-bottom:10px;line-height:1.9}
+.hero small .hi{font-family:'Tiro Devanagari Hindi',var(--body)}
+.hero small .te{font-family:'Tiro Telugu',var(--body)}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(2.6rem,7vw,4.6rem);line-height:1.08;color:#fff}
+.hero p.tag{font-size:1.2rem;margin:20px 0 30px;max-width:42ch;color:#e9e2ff}
+.arch{width:100%;max-width:340px;margin:0 auto;display:block}
+@media (max-width:780px){.hero .wrap{grid-template-columns:1fr;text-align:center}.hero .btns{justify-content:center}.hero p.tag{margin-left:auto;margin-right:auto}.arch{max-width:240px;order:-1}}
+
+/* about / facts */
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;margin-top:36px}
+.fact{background:#fff;border-top:6px solid var(--kumkum);padding:22px 18px;text-align:center;box-shadow:0 2px 0 var(--turmeric)}
+.fact strong{display:block;font-family:var(--display);font-weight:400;font-size:2.1rem;color:var(--indigo);line-height:1.2}
+
+/* occasions: jharokha arch cards */
+.occ{background:var(--blush)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+.card{background:var(--cream);border:2px solid var(--indigo);border-radius:110px 110px 6px 6px;padding:54px 22px 26px;text-align:center}
+.card h3{font-family:var(--display);font-weight:400;font-size:1.3rem;color:var(--kumkum);margin-bottom:6px}
+.card p{font-size:.98rem}
+
+/* facilities */
+.fac{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px 34px}
+.fac li{padding:10px 0 10px 38px;border-bottom:1px dashed #cdb98c;position:relative}
+.fac li::before{content:"";position:absolute;left:4px;top:50%;width:18px;height:18px;margin-top:-9px;background:
+ radial-gradient(circle,var(--turmeric) 28%,transparent 30%),
+ conic-gradient(var(--kumkum) 0 12.5%,transparent 0 25%,var(--kumkum) 0 37.5%,transparent 0 50%,var(--kumkum) 0 62.5%,transparent 0 75%,var(--kumkum) 0 87.5%,transparent 0);border-radius:50%}
+
+/* gallery */
+.gal{background:var(--indigo);background-image:var(--dots);color:var(--cream)}
+.gal h2{color:var(--turmeric)}
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.shots figure{aspect-ratio:4/5;border:3px solid var(--turmeric);border-radius:120px 120px 6px 6px;overflow:hidden;background:var(--indigo-d);display:grid;place-items:center;text-align:center;padding:24px;font-size:.98rem;color:#d8d2f0}
+.shots img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* book now band */
+.book{background:var(--kumkum);color:#fff;padding:56px 0}
+.book .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.book h2{color:#fff;margin:0}
+.book p{color:#ffe9e0}
+.book .note{font-size:.9rem;margin-top:6px;opacity:.85}
+
+/* enquiry */
+form{max-width:640px;margin:0 auto;display:grid;gap:14px;grid-template-columns:1fr 1fr}
+form .full{grid-column:1/-1}
+label{display:block;font-weight:600;font-size:.95rem;color:var(--indigo)}
+input,select{width:100%;padding:11px 14px;font:inherit;border:2px solid var(--indigo);border-radius:6px;background:#fff;color:var(--ink)}
+form .btn{justify-self:start}
+@media (max-width:560px){form{grid-template-columns:1fr}}
+
+/* location */
+.loc{background:var(--blush)}
+.map{border:3px solid var(--indigo);border-radius:6px 6px 6px 6px;overflow:hidden;height:400px;background:#ddd;margin-top:26px;box-shadow:8px 8px 0 var(--turmeric)}
+.map iframe{width:100%;height:100%;border:0}
+.addr{font-weight:600;color:var(--indigo)}
+.loc .btns{margin-top:30px}
+
+footer{background:var(--indigo-d);color:#cfc9ea;text-align:center;padding:34px 24px;font-size:.95rem}
+footer b{font-family:var(--display);font-weight:400;color:var(--turmeric);font-size:1.25rem;display:block}
+
+/* floating book button on phones */
+.float{position:fixed;right:16px;bottom:16px;z-index:30;display:none;box-shadow:0 4px 14px rgba(0,0,0,.3)}
+@media (max-width:780px){.float{display:inline-block}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<!-- ============ EDIT YOUR HALL DETAILS HERE ============ -->
+<script>
+const HALL = {
+  name: "Indu Sri Function Hall",
+  tagline: "A traditional home for your family’s most important days.",
+  bookingUrl: "",                 // paste your booking website link here later. While empty, "Book now" jumps to the enquiry form.
+  phone: "+91 97012 04587",
+  whatsapp: "919701204587",       // country code + number, no + or spaces
+  address: "Indu Sri Function Hall, Telangana",   // replace with the full address
+  mapsLink: "https://maps.app.goo.gl/NZwdh6JMsUQMX7tf7",
+  lat: 18.2919221, lng: 79.4810738,
+  facts: [["500–1000","Guest seating"],["30+","Car parking"],["24 hr","Power backup"]],
+  occasions: [
+    ["Weddings","Muhurtham, haldi, sangeet and the full set of rituals under one roof."],
+    ["Engagements","An intimate setting for nischitartham and ring ceremonies."],
+    ["Receptions","Spacious stage and seating for evening receptions."],
+    ["Birthdays and anniversaries","From first birthdays to golden jubilees."],
+    ["Corporate and community","Meetings, felicitations and cultural events."]
+  ],
+  facilities: [
+    "Spacious main hall with stage",
+    "Separate dining hall",
+    "Bridal and groom rooms",
+    "Guest rooms for family",
+    "Ample parking",
+    "Generator power backup",
+    "In-house or outside catering",
+    "Decoration and mandap support",
+    "Sound system and lighting",
+    "Clean washrooms on every floor"
+  ],
+  photos: []   // add image paths, e.g. ["photos/hall1.jpg","photos/stage.jpg","photos/dining.jpg"]
+};
+</script>
+<!-- ======================================================= -->
+
+<nav>
+  <a class="brand" href="#top" id="navName"></a>
+  <ul>
+    <li><a href="#occasions">Occasions</a></li>
+    <li><a href="#facilities">Facilities</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#enquiry">Enquire</a></li>
+    <li><a href="#location">Find us</a></li>
+  </ul>
+  <a class="btn gold" data-book href="#enquiry">Book now</a>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <small><span class="hi">॥ शुभ मंगल सावधान ॥</span><br><span class="te">॥ శుభ మంగళ సావధాన ॥</span></small>
+      <h1 id="heroName"></h1>
+      <p class="tag" id="tagline"></p>
+      <div class="btns">
+        <a class="btn gold" data-book href="#enquiry">Book now</a>
+        <a class="btn ghost" href="#enquiry">Check availability</a>
+      </div>
+    </div>
+    <!-- jharokha arch with lotus -->
+    <svg class="arch" viewBox="0 0 240 300" aria-hidden="true">
+      <path d="M10 296V120C10 50 70 8 120 8s110 42 110 112v176z" fill="#121c42" stroke="#f2b62c" stroke-width="5"/>
+      <path d="M30 290V122C30 62 78 26 120 26s90 36 90 96v168z" fill="#b3202a"/>
+      <path d="M50 290V124C50 74 86 44 120 44s70 30 70 80v166z" fill="#1c2a5e" stroke="#f2b62c" stroke-width="2"/>
+      <circle cx="120" cy="22" r="7" fill="#f2b62c"/>
+      <g transform="translate(120 170)" fill="#f2b62c">
+        <path d="M0 -46C12 -26 12 -8 0 8C-12 -8 -12 -26 0 -46z"/>
+        <path d="M0 -46C12 -26 12 -8 0 8C-12 -8 -12 -26 0 -46z" transform="rotate(40)" fill="#f6dcd0"/>
+        <path d="M0 -46C12 -26 12 -8 0 8C-12 -8 -12 -26 0 -46z" transform="rotate(-40)" fill="#f6dcd0"/>
+        <path d="M0 -46C12 -26 12 -8 0 8C-12 -8 -12 -26 0 -46z" transform="rotate(80)" fill="#b3202a"/>
+        <path d="M0 -46C12 -26 12 -8 0 8C-12 -8 -12 -26 0 -46z" transform="rotate(-80)" fill="#b3202a"/>
+        <circle r="7" fill="#fff"/>
+      </g>
+      <path d="M70 262h100M82 248h76" stroke="#f2b62c" stroke-width="3"/>
+    </svg>
+  </div>
+</header>
+<div class="strip" aria-hidden="true"></div>
+
+<section id="about">
+  <div class="wrap center">
+    <h2>Welcome</h2>
+    <p class="lead center">Every ritual deserves the right setting. Our hall brings together space, comfort and a traditional feel, so your family and guests can focus on the celebration.</p>
+    <div class="facts" id="facts"></div>
+  </div>
+</section>
+
+<section class="occ" id="occasions">
+  <div class="wrap">
+    <div class="sec-head center"><h2>Celebrations we host</h2></div>
+    <div class="grid" id="occGrid"></div>
+  </div>
+</section>
+
+<section id="facilities">
+  <div class="wrap">
+    <div class="sec-head"><h2>Facilities</h2><p class="lead">Everything your family needs before, during and after the function.</p></div>
+    <ul class="fac" id="facList"></ul>
+  </div>
+</section>
+
+<section class="gal" id="gallery">
+  <div class="wrap">
+    <div class="sec-head center"><h2>Gallery</h2><p class="lead center">A glimpse of the hall, stage and dining space.</p></div>
+    <div class="shots" id="shots"></div>
+  </div>
+</section>
+
+<div class="book" id="book">
+  <div class="wrap">
+    <div>
+      <h2>Planning a function?</h2>
+      <p>Reserve your date with us today.</p>
+      <p class="note" id="bookNote"></p>
+    </div>
+    <a class="btn gold" data-book href="#enquiry">Book now</a>
+  </div>
+</div>
+
+<section id="enquiry">
+  <div class="wrap">
+    <div class="sec-head center"><h2>Check availability</h2><p class="lead center">Share your plan and we will reply on WhatsApp with dates and rates.</p></div>
+    <form id="form">
+      <div><label for="n">Your name</label><input id="n" required autocomplete="name"></div>
+      <div><label for="p">Phone number</label><input id="p" type="tel" required autocomplete="tel"></div>
+      <div><label for="e">Event type</label><select id="e"></select></div>
+      <div><label for="d">Preferred date</label><input id="d" type="date"></div>
+      <div class="full"><label for="g">Expected guests</label><input id="g" type="number" min="1" placeholder="e.g. 300"></div>
+      <button class="btn full" type="submit">Send on WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<section class="loc" id="location">
+  <div class="wrap">
+    <div class="sec-head"><h2>Find us</h2><p class="addr" id="addr"></p></div>
+    <div class="map"><iframe id="mapFrame" title="Map showing the hall" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    <div class="btns"><a class="btn" id="dirBtn" target="_blank" rel="noopener" href="#">Get directions</a><a class="btn ghost" id="callBtn" style="color:var(--indigo);border-color:var(--indigo)" href="#">Call us</a></div>
+  </div>
+</section>
+
+<div class="strip" aria-hidden="true"></div>
+<footer>
+  <b>अतिथि देवो भव</b>
+  <span id="foot"></span>
+</footer>
+
+<a class="btn gold float" data-book href="#enquiry">Book now</a>
+
+<script>
+(function(){
+  const $ = id => document.getElementById(id);
+  const H = HALL;
+  document.title = H.name + " – Weddings, Receptions and Celebrations";
+  $("navName").textContent = H.name;
+  $("heroName").textContent = H.name;
+  $("tagline").textContent = H.tagline;
+  $("callBtn").href = "tel:" + H.phone.replace(/[^+\d]/g,"");
+  $("facts").innerHTML = H.facts.map(f => `<div class="fact"><strong>${f[0]}</strong>${f[1]}</div>`).join("");
+  $("occGrid").innerHTML = H.occasions.map(o => `<div class="card"><h3>${o[0]}</h3><p>${o[1]}</p></div>`).join("");
+  $("facList").innerHTML = H.facilities.map(f => `<li>${f}</li>`).join("");
+  $("shots").innerHTML = H.photos.length
+    ? H.photos.map(p => `<figure><img src="${p}" alt="${H.name}" loading="lazy"></figure>`).join("")
+    : ["Main hall","Stage and mandap","Dining hall"].map(t => `<figure>${t}<br>Photo coming soon</figure>`).join("");
+  $("e").innerHTML = H.occasions.map(o => `<option>${o[0]}</option>`).join("");
+  $("d").min = new Date().toISOString().slice(0,10);
+  $("addr").textContent = H.address + "  |  " + H.phone;
+  $("mapFrame").src = `https://www.google.com/maps?q=${H.lat},${H.lng}&z=17&output=embed`;
+  $("dirBtn").href = H.mapsLink;
+  $("foot").textContent = "© " + new Date().getFullYear() + " " + H.name + ". All rights reserved.";
+
+  // Book now: external link when set, otherwise jump to the enquiry form
+  document.querySelectorAll("[data-book]").forEach(a => {
+    if (H.bookingUrl) { a.href = H.bookingUrl; a.target = "_blank"; a.rel = "noopener"; }
+  });
+  $("bookNote").textContent = H.bookingUrl ? "" : "Online booking is coming soon. For now, send an enquiry below.";
+
+  $("form").addEventListener("submit", ev => {
+    ev.preventDefault();
+    const m = `Namaste! I would like to check availability at ${H.name}.\n` +
+      `Name: ${$("n").value}\nPhone: ${$("p").value}\nEvent: ${$("e").value}\n` +
+      `Date: ${$("d").value || "Not decided"}\nGuests: ${$("g").value || "Not sure"}`;
+    window.open("https://wa.me/" + H.whatsapp + "?text=" + encodeURIComponent(m), "_blank");
+  });
+})();
+</script>
+</body>
+</html>
